@@ -1,5 +1,6 @@
 package com.epam.mjc.stage0;
 
+
 /**
  * Here are the tasks for working with the arrays.
  * <p>
@@ -11,7 +12,8 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-
+        String [] arr = {"winter", "spring", "summer", "autumn"};
+        return arr;
     }
 
     /**
@@ -25,7 +27,12 @@ public class ArrayTasks {
      * length = 5  -> [1, 2, 3, 4, 5]
      */
     public int[] generateNumbers(int length) {
-
+        int [] arr;
+        arr = new int[length];
+        for (int i = 0; i < length; i ++) {
+            arr[i] = i+1;
+        }
+        return arr;
     }
 
     /**
@@ -37,7 +44,11 @@ public class ArrayTasks {
      * arr = [5, -3, -4] -> sum = -2
      */
     public int totalSum(int[] arr) {
-
+        int sum = 0;
+        for (int i = 0; i < arr.length; i ++) {
+            sum = sum + arr[i];
+        }
+        return sum;
     }
 
     /**
@@ -50,7 +61,12 @@ public class ArrayTasks {
      * arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-
+        for (int i = 0; i < arr.length; i ++) {
+            if (arr[i] == number) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -63,9 +79,16 @@ public class ArrayTasks {
      * arr = ["pineapple", "apple", "pen"] -> ["pen", "apple", "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
-
+        int a = arr.length;
+        String[] array;
+        array = new String[a];
+        for (int i = a-1; i >= 0; i --) {
+        for (int j=0; j<a; j++) {
+        arr[i] = array[j];
+        }
+        }
+        return array;
     }
-
     /**
      * Return new int[] array obtained from arr int[] array
      * by choosing positive numbers only.
@@ -78,7 +101,15 @@ public class ArrayTasks {
      * arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-
+        int j=0;
+        int [] res = new int[arr.length];
+        for (int i=0; i<arr.length; i++) {
+            if (arr[i]>0) {
+                res[j]=arr[i];
+                j++;
+            }
+        }
+        return res;
     }
 
     /**

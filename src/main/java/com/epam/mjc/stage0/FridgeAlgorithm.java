@@ -3,7 +3,15 @@ package com.epam.mjc.stage0;
 import com.epam.mjc.stage0.utils.Fridge;
 
 public class FridgeAlgorithm {
-
+    void open() {
+        System.out.println("Open fridge");
+    }
+    void getMilk(){
+        System.out.println("Get out milk");
+    };
+    void close() {
+        System.out.println("Close fridge");
+    };
     /**
      * This is a first task in this module. You need to get milk from a fridge =)
      * <p>
